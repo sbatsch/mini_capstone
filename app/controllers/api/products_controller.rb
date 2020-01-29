@@ -1,4 +1,6 @@
 class Api::ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
     @products = Product.all 
 
@@ -41,12 +43,11 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    if current_user
       @product = Product.find(params[:id])
       render 'show.json.jb'
-    else
-      render json: {}
-    end 
+      else
+        render json: {}
+      end 
   end 
 
   def update

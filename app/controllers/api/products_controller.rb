@@ -8,6 +8,12 @@ class Api::ProductsController < ApplicationController
     discount_option = params[:dsicount] == "true"
     sort_attribute = params[:sort]
     sort_order = params[:sort_order]
+    category_choice = params[:category]
+
+    if category_choice
+      category = Category.find_by(name: category_choice)
+      @products = category.products
+    end 
 
     if search_term
       @products = Product.where("name iLIKE ?", "%#{ search_term }%")
@@ -24,7 +30,6 @@ class Api::ProductsController < ApplicationController
     else 
       @products = @products.order(:id) 
     end 
-
 
     render 'index.json.jb'
   end 
@@ -43,8 +48,9 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-      @product = Product.find(params[:id])
-      render 'show.json.jb'
+      if 
+        @product = Product.find(params[:id])
+        render 'show.json.jb'
       else
         render json: {}
       end 

@@ -6,3 +6,35 @@
 #   {name: "lightsaber", price: "1000.0", image_url: "https://i.pinimg.com/736x/09/d1/0f/09d10f5895934b22d0a92f40efbfe699.jpg", description: "Once owned by Anakin Skywalker, this weapon emits a blue  plasma blade, powered by a kyber crystal, from a  metal hilt.", stocked: true},
 #   {name: "Thermal detonator", price: "900.0", image_url: "https://www.armour-factory.com/wp-content/uploads/2018/10/dt-1.jpg", description: "This palm-sized, spherical device is an extremely deadly explosive weapon.", stocked: true}
 # ])
+
+# Category.create(name: "Long-range")
+# Category.create(name: "Melee")
+# Category.create(name: "Legendary")
+# Category.create(name: "Common")
+
+# [[4, "Chewbacca's bowcaster"], [5, "Modified DL-44 Blaster"], [6, "Double-Bladed Lightsaber"], [3, "Thermal detonator"], [9, "E-11 Blaster Rifle "], [1, "lightsaber"]]
+ # [[1, "Long-range"], [2, "Melee"], [3, "Legendary"], [4, "Common"]]
+
+# ProductCategory.create(product_id: 4 , category_id: 1 )
+# ProductCategory.create(product_id: 4 , category_id: 3 )
+# ProductCategory.create(product_id: 5 , category_id: 1 )
+# ProductCategory.create(product_id: 5 , category_id: 3 )
+# ProductCategory.create(product_id: 6 , category_id: 3 )
+# ProductCategory.create(product_id: 6 , category_id: 2 )
+# ProductCategory.create(product_id: 3 , category_id: 4 )
+# ProductCategory.create(product_id: 3 , category_id: 2 )
+# ProductCategory.create(product_id: 9 , category_id: 1 )
+# ProductCategory.create(product_id: 9 , category_id: 4 )
+# ProductCategory.create(product_id: 1 , category_id: 2 )
+# ProductCategory.create(product_id: 1 , category_id: 3 )
+
+
+
+
+
+
+
+
+
+
+
